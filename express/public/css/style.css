@@ -1,0 +1,16 @@
+* {
+  font-family: sans-serif;
+  color: #2c333a;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #239fce5e;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.header .title {
+  color: darkblue;
+}

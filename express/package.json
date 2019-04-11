@@ -1,0 +1,25 @@
+{
+  "name": "chat",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "NODE_PATH=. NODE_ENV=development supervisor app.js"
+  },
+  "dependencies": {
+    "connect": "^3.6.6",
+    "connect-mongo": "^2.0.1",
+    "cookie": "^0.3.1",
+    "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
+    "express": "3.3.8",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.35",
+    "mongoose": "^4.13.12",
+    "nconf": "^0.8.5",
+    "socket.io": "^2.1.0",
+    "winston": "^2.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}

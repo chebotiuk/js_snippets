@@ -1,0 +1,19 @@
+{
+	"port" : 8000,
+	"mongoose": {
+		"url": "mongodb://localhost/chat",
+		"options": {
+			"useMongoClient": true,
+			"keepAlive": 1
+		}
+	},
+  "session": {
+    "secret": "secretPhrase",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  }
+}
