@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket example</title>
+</head>
+<body>
+  <p id="rss" />
+  <p id="heapTotal" />
+  <p id="heapUsed" />
+  <script type="text/javascript">
+    function updateStats (memuse) {
+      document.getElementById('rss').innerHTML = memuse.rss;
+      document.getElementById('heapTotal').innerHTML = memuse.heapTotal;
+      document.getElementById('heapUsed').innerHTML = memuse.heapUsed;
+    }
+
+    var ws = new WebSocket('ws://localhost:8080');
+
+    ws.onopen = function() {
+      console.log('соединение установлено');
+    };
+
+    ws.onmessage = function(e) {
+      updateStats(JSON.parse(event.data));
+    };
+
+    ws.onclose = function(e) {
+      if (e.wasClean) {
+        console.log('Соединение закрыто чисто');
+      } else {
+        console.log('Обрыв соединения');
+      }
+      console.log('Код' + e.code + ' причина' + e.reason);
+    };
+
+    ws.onerror = function(err) {
+      console.error('Ошибка ' + err.message);
+    }
+  </script>
+</body>
+</html>

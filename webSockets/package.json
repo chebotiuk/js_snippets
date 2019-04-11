@@ -1,0 +1,17 @@
+{
+  "name": "nodeWebSockets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_PATH=. NODE_ENV=development node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pavlo <chebotuk@gmail.com> (chebotiuk.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "ws": "^5.1.1"
+  }
+}

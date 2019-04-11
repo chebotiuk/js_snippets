@@ -1,0 +1,31 @@
+body {
+  font: 15px/1.2 Helvetica Neue, Arial, sans-serif;
+}
+
+.movie-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.movie {
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  display: flex;
+}
+
+.movie__poster {
+  height: 300px;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.movie__poster img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.movie__content {
+  padding: 10px;
+}

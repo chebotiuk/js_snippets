@@ -1,0 +1,14 @@
+<ul class="movie-list">
+  {% for movie in movies %}
+  <li class="movie">
+    <div class="movie__poster">
+      <img src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
+    </div>
+    <div class="movie__content">
+      <h3 class="movie__title">{{ movie.title | upper }}</h3>
+      <p class="movie__overview">{{ movie.overview }}</p>
+      <em class="movie__votes">Votes {{ movie.vote_average }}</em>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

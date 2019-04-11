@@ -1,0 +1,54 @@
+/* Variables */
+@myGrey: darkgrey;
+@myRed: #cc0033;
+@myBlue: #2C4D68;
+@gradient: linear-gradient(to top, @myRed, @myBlue); /* Alternative gradient */
+@border: 5px solid white;
+
+body {
+	background: darken(@myBlue, 30%);
+}
+.centering {
+	position: absolute;
+		top: 50%;
+		left: 50%;
+	transform: translate(-50%, -50%);
+}
+.border(@width: 5px, @type: solid, @color: white){
+    border:@arguments;
+}
+
+.gradient(@direction: to top, @colorOne: @myRed, @colorTwo: @myBlue) {
+	background: linear-gradient(@direction, @colorOne, @colorTwo);
+}
+.blockMix {
+	width: 300px;
+	height: 300px;
+	border: @border;
+	.centering();
+	.gradient(to bottom); /* Mixin */
+	box-shadow: 20px 20px 30px 0px #F99306;
+}
+
+/* String variables */
+@birdImg: "http://img10.deviantart.net/5450/i/2012/340/7/b/png_bird_by_moonglowlilly-d5n88u2.png";
+.image {
+	height: 300px;
+	width: 300px;
+	background: url(@birdImg) no-repeat;
+	background-size: cover;
+	.centering();
+}
+.title {
+	h2 {
+		@y: yellow;
+		color: @y;
+	}
+}
+h2 {
+	@z: 50px;
+	@m: 100px;
+	@myBlue: #0064ff;
+	color: #111111 + #222552;
+	margin: (@m - 50px) - @z;
+}
