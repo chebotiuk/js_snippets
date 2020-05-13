@@ -1,0 +1,19 @@
+{
+  "name": "less_snippet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "lessc ./less/styles.less ./css/styles.css"
+  },
+  "author": "Pavlo <chebotuk@gmail.com> (chebotiuk.github.io)",
+  "license": "ISC",
+  "devDependencies": {
+    "node-static": "^0.7.11"
+  },
+  "dependencies": {
+    "less": "^3.10.3"
+  }
+}

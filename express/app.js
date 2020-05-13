@@ -25,7 +25,7 @@ app.set('view engine', 'hb');
 
 app.use(express.favicon()); // устанавливает favicon.ico
 
-if (app.get('env') == 'development') { // выводит инфо о запросе
+if (app.get('env') === 'development') { // выводит инфо о запросе
   app.use(express.logger('dev'));
 } else {
   app.use(express.logger('default'));

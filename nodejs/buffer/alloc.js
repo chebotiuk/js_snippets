@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const b1 = Buffer.alloc(1024);
-console.log(b1);
+const b1 = Buffer.alloc(1024)
+console.log(b1)
 
-const b2 = Buffer.allocUnsafe(1024);
-console.log(b2);
+const b2 = Buffer.allocUnsafe(1024)
+console.log(b2)

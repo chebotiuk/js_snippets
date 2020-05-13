@@ -1,13 +1,10 @@
-var util = require('util');
-var http = require('http');
- 
-function HttpError(status, message) {
-  Error.captureStackTrace(this, HttpError);
+const buffer = Buffer.from('Marcus');
 
-  this.status = status;
-  this.message = message || http.STATUS_CODES[status] || 'Error';
+for (const char of buffer.values()) {
+  console.dir({ char }); // char is numerical HTML encoding of the Unicode character
 }
-util.inherits(HttpError, Error);
-HttpError.prototype.name = 'HttpError';
 
-exports.HttpError = HttpError;
+for (const [index, char] of buffer.entries()) {
+  const symb = String.fromCharCode(char);
+  console.dir({ index, char, symb });
+}

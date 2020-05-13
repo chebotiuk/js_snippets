@@ -5,9 +5,9 @@ const cluster = require('cluster');
 const os = require('os');
 
 const PORT = 2000;
+const pid = process.pid;
 
 const user = { name: 'jura', age: 22 };
-const pid = process.pid;
 
 const routing = {
   '/': 'welcome to homepage',
@@ -26,8 +26,10 @@ const types = {
 
 if (cluster.isMaster) {
   const count = os.cpus().length;
+
   console.log(`Master pid: ${pid}`);
   console.log(`Starting ${count} forks`);
+
   for (let i = 0; i < count; i++) cluster.fork();
 } else {
   const id = cluster.worker.id;

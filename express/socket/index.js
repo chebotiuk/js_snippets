@@ -93,7 +93,7 @@ module.exports = function (server) {
 
           client.handshake.session = {
             ...session,
-            sid,
+            id: sid,
           };
         })
         .catch(() => {

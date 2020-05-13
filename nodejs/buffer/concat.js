@@ -1,9 +1,13 @@
-'use strict';
+'use strict'
 
-const b1 = Buffer.from([57, 51, 52, 53, 54, 55, 56, 57, 58], 'utf8');
-const b2 = Buffer.alloc(10).fill('A');
+const b1 = Buffer.from([0x62, 0x75, 0x66, 0x66, 0x65, 0x72]);
+// Creates a new Buffer containing UTF-8 bytes of the string 'buffer'.
+// where 57 - numerical HTML encoding of the Unicode character
 
-const buffer = Buffer.concat([b1, b2]);
+const b2 = Buffer.alloc(10).fill('A')
 
-console.log(buffer); // output in url-encode
-console.log(buffer.toString('utf8'));
+const buffer = Buffer.concat([b1, b2])
+
+console.log(buffer) // output in UTF-8 (hex.)
+console.log(buffer.toJSON()) // output in numerical HTML encoding of the Unicode character
+console.log(buffer.toString('utf8'))

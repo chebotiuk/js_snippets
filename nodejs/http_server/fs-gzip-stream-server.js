@@ -6,9 +6,9 @@ const http = require('http')
 
 const once = fn => (...args) => {
   if (!fn) return
-  const res = fn(...args)
+  const result = fn(...args)
   fn = null
-  return res
+  return result
 }
 
 const prepareCache = callback => {

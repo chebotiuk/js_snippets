@@ -3,13 +3,13 @@ var fs = require('fs');
 
 http.createServer(function(req, res) {
   if (req.url === '/') {
-    fs.readFile('index.html', function(err, info) {
+    fs.readFile('index.html', function(err, data) {
       if (err) {
         console.log(err);
         res.end('На сервере произошла ошибка!');
         return;
       } else {
-        res.end(info);
+        res.end(data);
       }
     });
   } else if (req.url === '/post') {
