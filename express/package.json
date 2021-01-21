@@ -16,7 +16,7 @@
     "mongodb": "^2.2.35",
     "mongoose": "^4.13.12",
     "nconf": "^0.8.5",
-    "socket.io": "^2.1.0",
+    "socket.io": "^2.4.0",
     "winston": "^2.4.1"
   },
   "devDependencies": {
